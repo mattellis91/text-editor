@@ -1,0 +1,55 @@
+body {
+  overflow-x: hidden;
+  transition: background-color ease-out 0.3s, color ease-out 0.3s;
+}
+
+main {
+  height: 100%;
+}
+
+div {
+  transition: background-color ease-out 0.3s;
+}
+
+p,
+button,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  transition: color ease-out 0.3s;
+}
+
+::-webkit-scrollbar,
+code::-webkit-scrollbar {
+  width: 2px;
+  &:hover {
+    width: 4px;
+  }
+}
+
+::-webkit-scrollbar-track,
+code::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--bs-gray-900);
+}
+
+::-webkit-scrollbar-thumb,
+code::-webkit-scrollbar-thumb {
+  background: var(--bs-gray-400);
+  border-radius: 10px;
+  &:hover {
+    background: var(--bs-gray-600);
+  }
+}
+
+pre {
+  scrollbar-width: thin;
+}
+
+::selection {
+  background-color: var(--highlight-primary);
+  color: var(--text-highlight);
+}
