@@ -25,7 +25,7 @@
         </g>
       </svg>
     </div>
-    <h1 class="header__heading">MARKDOWN</h1>
+    <!-- <h1 class="header__heading">MARKDOWN</h1> -->
     <div class="header__divider"></div>
     <div class="header__file">
       <file-display hide-sub-heading-mobile>
@@ -109,8 +109,7 @@ export default {
     height: 72px;
   }
   &__menu-container {
-    background-color: var(--bs-gray-700);
-    height: 100%;
+    height: 50%;
     width: 56px;
     display: flex;
     justify-content: center;

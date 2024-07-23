@@ -18,7 +18,7 @@ export default {
   },
   data() {
     return {
-      showNav: false
+      showNav: true
     };
   },
   methods: {
@@ -29,7 +29,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+@import "splitpanes/dist/splitpanes.css";
 .main-body {
   position: absolute;
   width: 100%;
@@ -40,5 +41,14 @@ export default {
   &--nav-open {
     left: 250px;
   }
+}
+.splitpanes__pane {
+  background: none !important;
+}
+
+.splitpanes__splitter {
+  height: 1px !important;
+  border-top: 1px solid black !important;
+  margin-top: -1px;
 }
 </style>

@@ -21,8 +21,10 @@
     "dompurify": "^2.3.6",
     "marked": "^4.0.12",
     "pinia": "^2.0.13",
+    "splitpanes": "^3.1.5",
     "vue": "^3.2.31",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.0.3",
+    "vue-simple-context-menu": "^4.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

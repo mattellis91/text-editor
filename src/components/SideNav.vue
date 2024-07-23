@@ -1,9 +1,10 @@
 <template>
   <nav :class="['side-nav', navOpen && 'side-nav--nav-open']">
-    <span class="heading side-nav__heading">MY DOCUMENTS</span>
-    <v-button @click="createNewFile">+ New Document</v-button>
+    <span>Explorer</span>
+    <!-- <span class="heading side-nav__heading">MY DOCUMENTS</span> -->
+    <!-- <v-button @click="createNewFile">+ New Document</v-button> -->
     <div class="side-nav__files-container">
-      <file-display
+      <!-- <file-display
         v-for="file in files"
         :key="file.fileName"
         class="side-nav__file"
@@ -11,7 +12,18 @@
         :to="`/${file.fileName}`"
         restrict-width
         >{{ `${file.fileName}.md` }}</file-display
-      >
+      > -->
+      <splitpanes class="default-theme" horizontal style="height: 400px">
+        <pane min-size="20" max-size="70">
+          <span>1</span>
+        </pane>
+        <pane>
+          <span>2</span>
+        </pane>
+        <pane max-size="70">
+          <span>3</span>
+        </pane>
+      </splitpanes>
     </div>
     <div class="side-nav__theme-controls">
       <svg
@@ -51,6 +63,7 @@
 import { mapState, mapActions } from "pinia";
 import { useMarkdownStore } from "@/store/MarkdownStore";
 import { formatDate } from "@/functions/formatDate";
+import { Splitpanes, Pane } from "splitpanes";
 
 export default {
   props: {
@@ -59,6 +72,7 @@ export default {
       required: true
     }
   },
+  components: { Splitpanes, Pane },
   data() {
     return {
       themeActive: "dark"
@@ -102,7 +116,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .form-check-label {
   visibility: hidden;
   height: 0;
